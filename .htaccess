@@ -17,6 +17,6 @@ RewriteRule ^accueil\.html$ /projet_xml/index.php?id=0 [L]
 # htaccess doit être à la racine du local host
 
 # Réécriture des différentes pages en html vers les pages en php
-RewriteRule ^presentation\.html$ /projet_xml/index.php?id=1 [L]
-RewriteRule ^avis\.html$ /projet_xml/index.php?id=2 [L]
+RewriteRule ^qui-sommes-nous\.html$ /projet_xml/index.php?id=1 [L]
+RewriteRule ^nos-clients-temoignent\.html$ /projet_xml/index.php?id=2 [L]
 RewriteRule ^contact\.html$ /projet_xml/index.php?id=3 [L]

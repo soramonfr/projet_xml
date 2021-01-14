@@ -51,10 +51,10 @@ if (isset($_GET['id']) && ($_GET['id']) == 3) {
                         <a class="nav-link" href="/accueil.html">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/presentation.html">A propos</a>
+                        <a class="nav-link" href="/qui-sommes-nous.html">A propos</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="/avis.html">Témoignages</a>
+                        <a class="nav-link" href="/nos-clients-temoignent.html">Témoignages</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="/contact.html">Contact</a>
