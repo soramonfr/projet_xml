@@ -1,17 +1,22 @@
 # Tuto suivi https://apprendre-php.com/tutoriels/tutoriel-23-url-rewriting-ou-rcriture-d-url-avec-apache.html
 
-#Configuration du module Rewrite
+# Configuration du module Rewrite
 
 # On suit les liens symboliques 
-Options +FollowSymlinks 
+Options +FollowSymLinks 
 
 # Activation du mod rewrite d'Apache 
 RewriteEngine On
 
-#Ecriture de la première règle de redirection
+# Ecriture de la première règle de redirection
 
 # Réécriture de index.html vers index.php 
 RewriteRule ^accueil\.html$ /projet_xml/index.php?id=0 [L]
-#quand on a une url en index.html, elle interprétée comme index.php
-#[L] flag Last
-#htaccess doit être à la racine du local host
+# quand on a une url en index.html, elle interprétée comme index.php
+# [L] flag Last
+# htaccess doit être à la racine du local host
+
+# Réécriture des différentes pages en html vers les pages en php
+RewriteRule ^presentation\.html$ /projet_xml/index.php?id=1 [L]
+RewriteRule ^avis\.html$ /projet_xml/index.php?id=2 [L]
+RewriteRule ^contact\.html$ /projet_xml/index.php?id=3 [L]

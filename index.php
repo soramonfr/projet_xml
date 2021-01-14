@@ -36,7 +36,7 @@ if (isset($_GET['id']) && ($_GET['id']) == 3) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="../projet_xml/assets/css/style.css" rel="stylesheet" type="text/css">
     <title>TP XML</title>
 </head>
 
@@ -51,13 +51,13 @@ if (isset($_GET['id']) && ($_GET['id']) == 3) {
                         <a class="nav-link" href="/accueil.html">Accueil</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php?id=1">A propos</a>
+                        <a class="nav-link" href="/presentation.html">A propos</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php?id=2">Témoignages</a>
+                        <a class="nav-link" href="/avis.html">Témoignages</a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php?id=3">Contact</a>
+                        <a class="nav-link" href="/contact.html">Contact</a>
                     </li>
                 </ul>
             </div>
