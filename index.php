@@ -48,7 +48,7 @@ if (isset($_GET['id']) && ($_GET['id']) == 3) {
             <div class="collapse navbar-collapse" id="navbar-btn">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php?id=0">Accueil</a>
+                        <a class="nav-link" href="/accueil.html">Accueil</a>
                     </li>
                     <li class="nav-item active">
                         <a class="nav-link" href="index.php?id=1">A propos</a>
