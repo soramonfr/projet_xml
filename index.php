@@ -46,42 +46,40 @@ if (isset($_GET['id']) && (intval($_GET['id'])) == 3) {
 
 <body>
     <!-- Génération Navbar & Menu burger -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark navbarColor">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-btn" aria-controls="navbar-btn" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbar-btn">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="/accueil.html">Accueil</a>
+        <div class="collapse navbar-collapse justify-content-center" id="navbar-btn">
+            <ul class="navbar-nav text-center">
+                <li>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/accueil.html">Accueil</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/qui-sommes-nous.html">Qui sommes nous?</a>
+                <li>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/qui-sommes-nous.html">Qui sommes nous?</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/nos-clients-temoignent.html">Nos clients témoignent</a>
+                <li>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/nos-clients-temoignent.html">Nos clients témoignent</a>
                 </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="/contact.html">Contact</a>
+                <li>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/contact.html">Contact</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div class="container-fluid p-0">
-        <div>
-            <!-- Génération du fil d'Ariane -->
-            <?php if (isset($_GET['id']) && (intval($_GET['id'])) > 0) : ?>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/accueil.html">Accueil</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><?= $xml->page[intval($_GET["id"])]->menu ?></li>
-                    </ol>
-                </nav>
-            <?php endif ?>
-            <!-- Génération du contenu -->
-            <?= isset($displayContent) ? $displayContent : '' ?>
-        </div>
+        <!-- Génération du fil d'Ariane -->
+        <?php if (isset($_GET['id']) && (intval($_GET['id'])) > 0) : ?>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/accueil.html">Accueil</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><?= $xml->page[intval($_GET["id"])]->menu ?></li>
+                </ol>
+            </nav>
+        <?php endif ?>
+        <!-- Génération du contenu -->
+        <?= isset($displayContent) ? $displayContent : '' ?>
     </div>
 
 
