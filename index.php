@@ -53,16 +53,16 @@ if (isset($_GET['id']) && (intval($_GET['id'])) == 3) {
         <div class="collapse navbar-collapse justify-content-center" id="navbar-btn">
             <ul class="navbar-nav text-center">
                 <li>
-                    <a class="nav-link text-white my-auto h4 mx-2" href="/accueil.html">Accueil</a>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/accueil.html"><?= $xml->page[0]->menu ?></a>
                 </li>
                 <li>
-                    <a class="nav-link text-white my-auto h4 mx-2" href="/qui-sommes-nous.html">Qui sommes nous?</a>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/qui-sommes-nous.html"><?= $xml->page[1]->menu ?></a>
                 </li>
                 <li>
-                    <a class="nav-link text-white my-auto h4 mx-2" href="/nos-clients-temoignent.html">Nos clients témoignent</a>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/nos-clients-temoignent.html"><?= $xml->page[2]->menu ?></a>
                 </li>
                 <li>
-                    <a class="nav-link text-white my-auto h4 mx-2" href="/contact.html">Contact</a>
+                    <a class="nav-link text-white my-auto h4 mx-2" href="/contact.html"><?= $xml->page[3]->menu ?></a>
                 </li>
             </ul>
         </div>
