@@ -30,3 +30,6 @@ RewriteRule ^contact\.html$ /projet_xml/index.php?id=3 [L]
 
 # On peut personnaliser ici les différentes pages d'erreur que l'on peut rencontrer (ex: Error 404). 
 # A garder avec la même charte graphique, pour aider l'utilisateur à savoir s'il est encore sur le bon site.
+
+# CUSTOM ERROR PAGES 
+ErrorDocument 404 /projet_xml/error/error404.html 
