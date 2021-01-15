@@ -68,7 +68,7 @@ if (isset($_GET['id']) && (intval($_GET['id'])) == 3) {
         </div>
     </nav>
 
-    <div class="container-fluid">
+    <div class="container-fluid p-0">
         <div>
             <!-- Génération du fil d'Ariane -->
             <?php if (isset($_GET['id']) && (intval($_GET['id'])) > 0) : ?>
