@@ -5,7 +5,7 @@ if (!isset($_GET['id'])) {
 }
 // Récupération et lecture des données XML 
 $xml = simplexml_load_file("assets/source_xml/source.xml");
-// Différentes pages du site - ok pour les essais mais à factoriser (car même structure: page - menu - titre et content)
+// Affichage des différentes pages du site
 $homepage = $xml->page[0]->content;
 $about = $xml->page[1]->content;
 $testimonies = $xml->page[2]->content;
@@ -40,37 +40,48 @@ if (isset($_GET['id']) && (intval($_GET['id'])) == 3) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="../projet_xml/assets/css/style.css" rel="stylesheet" type="text/css">
+    <!-- Génération du titre en fonction de son index -->
     <title><?= $xml->page[intval($_GET["id"])]->title ?></title>
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-btn" aria-controls="navbar-btn" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbar-btn">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/accueil.html">Accueil</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/qui-sommes-nous.html">A propos</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/nos-clients-temoignent.html">Témoignages</a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/contact.html">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <!-- Génération Navbar & Menu burger -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-btn" aria-controls="navbar-btn" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar-btn">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/accueil.html">Accueil</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/qui-sommes-nous.html">Qui sommes nous?</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/nos-clients-temoignent.html">Nos clients témoignent</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
     <div class="container-fluid">
         <div>
+            <!-- Génération du fil d'Ariane -->
+            <?php if (isset($_GET['id']) && (intval($_GET['id'])) > 0) : ?>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/accueil.html">Accueil</a></li>
+                        <li class="breadcrumb-item active" aria-current="page"><?= $xml->page[intval($_GET["id"])]->menu ?></li>
+                    </ol>
+                </nav>
+            <?php endif ?>
+            <!-- Génération du contenu -->
             <?= isset($displayContent) ? $displayContent : '' ?>
         </div>
-
     </div>
 
 
