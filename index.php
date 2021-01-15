@@ -1,4 +1,8 @@
 <?php
+// Routing - appel page accueil.html à l'état initial
+if (!isset($_GET['id'])) {
+    header('Location: /accueil.html');
+}
 // Récupération et lecture des données XML 
 $xml = simplexml_load_file("assets/source_xml/source.xml");
 // Différentes pages du site - ok pour les essais mais à factoriser (car même structure: page - menu - titre et content)
@@ -26,7 +30,6 @@ if (isset($_GET['id']) && ($_GET['id']) == 2) {
 if (isset($_GET['id']) && ($_GET['id']) == 3) {
     $displayContent = $contact;
 }
-
 ?>
 
 <!DOCTYPE html>

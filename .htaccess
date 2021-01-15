@@ -12,6 +12,7 @@ RewriteEngine On
 
 # Réécriture de index.html vers index.php 
 RewriteRule ^accueil\.html$ /projet_xml/index.php?id=0 [L]
+
 # quand on a une url en index.html, elle interprétée comme index.php
 # [L] flag Last
 # htaccess doit être à la racine du local host
@@ -20,3 +21,12 @@ RewriteRule ^accueil\.html$ /projet_xml/index.php?id=0 [L]
 RewriteRule ^qui-sommes-nous\.html$ /projet_xml/index.php?id=1 [L]
 RewriteRule ^nos-clients-temoignent\.html$ /projet_xml/index.php?id=2 [L]
 RewriteRule ^contact\.html$ /projet_xml/index.php?id=3 [L]
+
+# RewriteRule Déjà écrit en regex
+# $1 on va utiliser la première valeur que l'on va rencontrer dans l'url
+# regex capturante RewriteRule ^qui-sommes-nous\.html/(.)/(.)$ /projet_xml/index.php?id=1&id_profil=$1 [L]
+# entre () donnée réinjectée (ici $1 dans les ()) dans l'url 
+# on peut sélectionner les données que l'on va utiliser dans l'url et réutiliser ou non côté serveur
+
+# On peut personnaliser ici les différentes pages d'erreur que l'on peut rencontrer (ex: Error 404). 
+# A garder avec la même charte graphique, pour aider l'utilisateur à savoir s'il est encore sur le bon site.
