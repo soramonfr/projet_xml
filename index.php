@@ -15,19 +15,19 @@ if (empty($_GET)) {
     $displayContent = $homepage;
 }
 
-if (isset($_GET['id']) && ($_GET['id']) == 0) {
+if (isset($_GET['id']) && (intval($_GET['id'])) == 0) {
     $displayContent = $homepage;
 }
 
-if (isset($_GET['id']) && ($_GET['id']) == 1) {
+if (isset($_GET['id']) && (intval($_GET['id'])) == 1) {
     $displayContent = $about;
 }
 
-if (isset($_GET['id']) && ($_GET['id']) == 2) {
+if (isset($_GET['id']) && (intval($_GET['id'])) == 2) {
     $displayContent = $testimonies;
 }
 
-if (isset($_GET['id']) && ($_GET['id']) == 3) {
+if (isset($_GET['id']) && (intval($_GET['id'])) == 3) {
     $displayContent = $contact;
 }
 ?>
@@ -40,7 +40,7 @@ if (isset($_GET['id']) && ($_GET['id']) == 3) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="../projet_xml/assets/css/style.css" rel="stylesheet" type="text/css">
-    <title>TP XML</title>
+    <title><?= $xml->page[intval($_GET["id"])]->title ?></title>
 </head>
 
 <body>
