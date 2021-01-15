@@ -9,8 +9,10 @@ Visuellement vous aurez autant de pages que de nœud **page** mais réellement v
 - title : titre de la page
 - content : contenu de la page
 
-Vous n'aurez le droit que d'ajouter des classes ou des ids dans le code HTML du nœud content. Cela pour vous permettre de styliser vos pages. La structure ne doit pas être modifiée.   
+Vous aurez le droit d'ajouter des classes ou des ids dans le code HTML du nœud content. Cela pour vous permettre de styliser vos pages. La structure ne doit pas être (trop) modifiée.   
 Vous devrez réécrire les urls pour qu'elles prennent le titre de la page suivit de l'extension html 
 Ex : si id 1 = accueil alors dans l'url on devra trouver accueil.html
 
-Ajout d'un fil d'Ariane
+Bonus:
+- Ajout d'un fil d'Ariane.
+- Ajout d'une page erreur 404.
